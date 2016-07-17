@@ -1,0 +1,370 @@
+// Foundation by ZURB
+// foundation.zurb.com
+// Licensed under MIT Open Source
+
+// Behold, here are all the Foundation components.
+
+@import 'reset'
+@import 'foundation.min'
+@import 'foundation-icons'
+@import 'flaticon'
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,700,300)
+
+//VARIABLES
+
+$icons: sprite-map('sprites/*.png')
+
+//fonts
+
+$family: 'Raleway', sans-serif
+$orange: #ef7900
+$blue: #456ca9
+$white: white
+$light: 300
+$normal: 400
+$bold: 700
+
+// Backgrounds
+
+$offcanvas: rgba(255,255,255,1)
+$bg: #e2f0f4
+$headfoot: rgba(255,255,255,0.7)
+
+// Wrappers
+
+$full: 100%
+$big: 95%
+$med: 80%
+$lil: 65%
+
+// Blocks
+
+$centered: 0 auto
+
+//Mixins
+
+//Usually this mixin is already implemented by compass but due to a bug it isn't the case anymore
+//Wait for the next update of compass
+//documentation: http://compass-style.org/reference/compass/utilities/sprites/base/#mixin-sprite-dimensions  
+=sprite-dimensions($map, $sprite)
+  height: image-height(sprite-file($map, $sprite))
+  width: image-width(sprite-file($map, $sprite))
+  
+//Insert the code which should overwrite everything below
+
+#test_image
+  background: image-url('arrows.png')
+  height: image-height('arrows.png')
+  width: image-width('arrows.png')
+
+//SPRITES  
+  //layout  
+i
+  background: $icons
+  display: inline-block
+
+  //specific case
+.icn-test
+  background-position: sprite-position($icons, paint)
+  +sprite-dimensions($icons, paint)
+
+  //automatic generation
+  //$i is the name of the sprite
+@each $i in sprite_names($icons)
+  .icn-#{$i}
+    background-position: sprite-position($icons, $i)
+    +sprite-dimensions($icons, $i)
+	
+body
+  background-color: $bg
+  
+li i
+  font-weight: $normal
+
+.main_wrapper
+  width: $full
+  max-width: $full
+  margin: $centered
+  font-family: $family
+
+.main_wrapper section
+  margin: 50px 0
+  height: auto
+
+.main_wrapper section .row
+  display: block
+  margin: $centered
+
+.main_wrapper section .big_wrap,
+.main_wrapper section .med_wrap,
+.main_wrapper section .lil_wrap
+  display: block
+  margin: $centered
+
+.big_wrap
+  width: $big
+  min-width: $big
+
+.med_wrap
+  width: $med
+  min-width: $med
+
+.lil_wrap
+  width: $lil
+  min-width: $lil
+
+.main_wrapper section
+  margin: 50px 0
+  height: auto
+
+.main_wrapper section .row
+  display: block
+  margin: $centered
+
+.main_wrapper section .big_wrap,
+.main_wrapper section .med_wrap,
+.main_wrapper section .lil_wrap
+  display: block
+  margin: $centered
+
+header
+  display: block
+  margin: $centered
+  max-width: $full
+  margin-bottom: 50px
+  background-color: $headfoot
+  max-height: 160px
+  padding: 15px
+  right: 0px
+  left: 0px !important
+  top: auto !important
+  bottom: auto !important
+  width: 100%
+
+.sticky
+  width: $full
+
+.title-bar
+  padding: 15px
+  background-color: $headfoot
+	
+header nav
+  margin-top: 5px
+
+header a
+  display: block
+  font-size: 17px
+  font-weight: $bold
+  text-align: center
+  width: 100px
+  color: $blue
+
+header a:hover,
+header a:focus
+  color: $orange
+
+header .title-bar-right
+  margin-right: 10%
+
+header .has-form .button,
+.off-canvas-wrapper-inner .has-form .button
+  padding: 0.80em 1em
+  border-left: 1px solid #e2f0f4
+  background-color: transparent
+
+header .has-form .button i:before,
+.off-canvas-wrapper-inner .has-form .button i:before
+  color: $blue
+
+header .has-form input,
+.off-canvas-wrapper-inner .has-form input
+  border: none
+  background: transparent
+
+header .has-form .button.expand,
+header .has-form input,
+.off-canvas-wrapper-inner .has-form .button.expand,
+.off-canvas-wrapper-inner .has-form input
+  margin: 0 !important
+
+[type=color]:focus, [type=date]:focus, [type=datetime-local]:focus, [type=datetime]:focus, [type=email]:focus, [type=month]:focus, [type=number]:focus, [type=password]:focus, [type=search]:focus, [type=tel]:focus, [type=text]:focus, [type=time]:focus, [type=url]:focus, [type=week]:focus, textarea:focus
+  border: 1px solid $orange
+  background-color: tansparent
+  box-shadow: 0 0 5px $orange
+
+.off-canvas-wrapper-inner .title-bar-left
+  margin-top: 5px
+
+//off canvas
+
+.title-bar
+  background-color: $offcanvas
+  position: fixed
+  width: $full
+  z-index: 45
+
+.off-canvas
+  background-color: $offcanvas
+  height: $full
+
+.off-canvas ul li a
+  color: $blue
+
+.off-canvas ul li a:hover,
+.off-canvas ul li a:focus
+  background-color: $orange
+  color: $white
+
+.off-canvas-content, .off-canvas-content
+  background: none
+  padding-bottom: 0px
+
+.js-off-canvas-exit 
+  z-index: 50
+	 
+.off-canvas-wrapper 
+  overflow-x: hidden
+  overflow: hidden
+
+.off-canvas-wrapper span
+  color: $blue
+
+.off-canvas-wrapper .row
+  overflow: visible
+  padding-left: 0
+  padding-right: 0
+
+.off-canvas-wrapper .column:not(li)
+  overflow: hidden
+  max-width: $full
+
+.tab-bar-section
+  display: block
+  margin: $centered
+  height: 2.8125rem
+  padding: 0 0.625rem
+  position: absolute
+  text-align: center
+  top: 0
+
+.tab-bar-section.middle
+  left: 2.8125rem
+  right: 2.8125rem
+
+.menu-icon:after
+  background: $blue
+  box-shadow: 0 7px 0 $blue,0 14px 0 $blue
+
+.menu-icon:hover:after
+  background: $blue
+  box-shadow: 0 7px 0 $blue,0 14px 0 $blue
+
+// TITLE SECTION
+
+h1
+  text-align: center
+  font-weight: $light
+  font-size: 75px
+  margin-top: 100px
+  color: $blue
+
+// DESCRIPTION SECTION
+
+#description p
+  text-align: center
+  padding: 0 150px
+  font-size: 25px
+  color: $orange
+  
+// PIG SECTION
+
+#pig_form
+  display: none
+  padding: 0 150px
+
+#pig_form > .has-form > div
+  display: block
+  margin: $centered
+
+#pig_form > .has-form .button	
+  background-color: $orange
+
+#pig_form > .has-form .button:hover	
+  background-color: $blue
+
+#pig_form > .has-form [type='text']	
+  background-color: $white
+
+#pig_form > p
+  text-align: center
+  font-weight: $light
+  font-style: italic
+  font-size: 35px
+  margin-top: 100px
+  color: $blue
+
+#pig_form > p:before,
+#pig_form > p:after
+  content: "\""
+
+#pig_form > .has-form a
+  width: 100%
+
+// FOOTER
+footer
+  background-color: $white
+  display: block
+  width: $full
+  margin-top: 400px
+
+.menu  li
+  list-style: none
+
+.menu > li
+  display: inline-block
+  position: relative
+
+footer > .row > div
+  display: block
+  margin: $centered
+
+footer
+  text-align: center
+  padding: 15px 10%
+
+footer a
+  display: block
+  color: black
+  line-height: 2em
+  font-size: 22px
+  font-weight: $bold
+  text-align: center
+  width: 200px
+
+footer a:hover
+  color: $blue
+
+footer > span
+  display: block
+  text-align: center
+  color: #b2c0c4
+  margin-top: 25px
+
+/*MEDIA QUERIES*/
+@media screen and (max-width: 1023px)	
+  #pig_form
+    padding: 0 100px
+	
+  #pig_form > .has-form a
+    width: 100px	
+
+@media screen and (max-width: 639px)
+  #pig_form
+    padding: 0 50px
+	
+  #pig_form > .has-form a
+    width: 75px
+	
+  .lil_wrap
+    width: $full
+    min-width: $full

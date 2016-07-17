@@ -1,0 +1,126 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+		<title>Pig Latinizer</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="css/app.css" />
+		<script type="text/javascript" src="js/vendor/jquery.js"></script>
+		<script type="text/javascript" src="js/vendor/what-input.js"></script>
+		<script type="text/javascript" src="js/vendor/foundation.min.js"></script>
+		<script type="text/javascript" src="js/app.js"></script>
+		<script type="text/javascript" src="js/resizer.js"></script>
+	</head>
+	<body>
+	<!-- WRAPPER -->
+	<div class="main_wrapper"> 
+		<!-- OFF CANVAS WRAPPER (for responsive top bar) -->
+		<div class="off-canvas-wrapper">
+			<div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+				<!-- off-canvas title bar for 'small' screen -->
+				<div class="title-bar" data-responsive-toggle="widemenu" data-hide-for="medium">
+					<div class="title-bar-left">
+						<button class="menu-icon" type="button" data-open="offCanvasLeft"></button>
+						<span class="title-bar-title">Menu</span>
+					</div>
+					<div class="title-bar-right">
+						<div class="has-form">
+							<div class="row collapse">
+								<div class="large-9 small-10 columns">
+									<input type="text" placeholder="SEARCH">
+								</div>
+								<div class="large-3 small-2 columns"> <a href="#" class="button expand"><i class="fa fa-search" aria-hidden="true"></i></a> </div>
+							</div>
+						</div>
+					</div>
+				</div>		
+				<!-- off-canvas left menu -->
+				<div class="off-canvas position-left" id="offCanvasLeft" data-off-canvas>
+					<ul class="vertical dropdown menu" data-dropdown-menu>
+						<li><a href="https://www.linkedin.com/in/kevin-liozon-39117bb3" target="_blank">LinkedIn</a></li>
+						<li><a href="https://www.smashingmagazine.com/" target="_blank">Resource</a></li>
+						<li><a href="#pig_form" class="app">App</a></li>
+					</ul>
+				</div>
+				<!-- original content goes in this container -->
+				<div class="off-canvas-content" data-off-canvas-content>
+					<div class="row column">
+						<!-- HEADER -->
+						<div class="row" data-sticky-container>
+							<header data-sticky data-options="marginTop:0;">
+								<nav class="medium-6 columns text-center title-bar-left hide-for-small-only">
+									<ul class="menu">
+										<li><a href="https://www.linkedin.com/in/kevin-liozon-39117bb3" target="_blank">LinkedIn</a></li>
+										<li><a href="https://www.smashingmagazine.com/" target="_blank">Resource</a></li>
+										<li><a href="#pig_form" class="app">App</a></li>
+									</ul>
+								</nav>
+								<nav class="medium-4 columns title-bar-right hide-for-small-only">
+									<div class="has-form">
+										<div class="row collapse">
+											<div class="large-9 small-10 columns">
+												<input type="text" placeholder="SEARCH">
+											</div>
+											<div class="large-3 small-2 columns"><a href="#" class="button expand"><i class="fa fa-search" aria-hidden="true"></i></a></div>
+										</div>
+									</div>
+								</nav>
+							</header>
+						</div>
+						<!-- END HEADER -->
+						<!-- SECTION TITLE -->
+						<section id="title">
+							<div class="row lil_wrap">
+								 <h1>The Pig Latinizer</h1>
+							</div>
+						</section>
+						<!-- END TITLE -->
+						<!-- SECTION DESCRIPTION -->
+						<section id="description">
+							<p>
+								<strong>Pig Latin</strong> is a language game in which words in English are altered. The objective is to conceal the words from others not familiar with the rules. The reference to Latin is a deliberate misnomer, as it is simply a form of jargon, used only for its English connotations as a strange and foreign-sounding language (source: <a href="https://en.wikipedia.org/wiki/Pig_Latin" target="_blank">Wikipedia</a>).
+							</p>
+							<p>
+								Get started by selecting the <strong>"app"</strong> tab in the menu!
+							</p>
+						</section>
+						<!-- SECTION DESCRIPTION -->
+						<!-- SECTION PIG -->
+						<section id="pig_form">
+							<div class="has-form">
+								<div class="lil_wrap row collapse">
+									<div class="large-9 small-10 columns">
+										<input type="text" name="value_to_pig" placeholder="Piglatinize any word!" />
+									</div>
+									<div class="large-3 small-2 columns"><a href="#" class="button expand">Pig&nbsp;It!</a></div>
+								</div>
+							</div>
+							<p>
+								Enter a word without any number or symbol in the form above and live what is going to be the greatest experience of your life
+							</p>
+						</section>
+						<!-- END PIG -->
+						<!-- FOOTER -->
+						<footer>
+								<nav id="menu_footer">					
+									<ul class="menu">
+										<li><a href="http://kevinliozon.com/" target="_blank">Portfolio</a></li>
+										<li><a href="doc/cv_liozon_kevin.pdf" target="_blank">CV</a></li>
+										<li><a href="https://www.codeschool.com/users/2480786" target="_blank">Codeschool</a></li>
+										<li><a href="https://www.nngroup.com/" target="_blank">Alternative Resource</a></li>
+									</ul>						
+								</nav>
+								<span>© 2014 Me</span>
+						</footer>
+						<!-- END FOOTER -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- END OFF CANVAS WRAPPER --> 
+	</div>
+	<!-- END WRAPPER -->
+	</body>
+</html>
